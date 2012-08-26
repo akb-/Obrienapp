@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns		= "http://www.w3.org/ns/widgets"
+	xmlns:gap	= "http://phonegap.com/ns/1.0"
+	id		= "com.obrien.app"
+	version 	= "1.0.0">
+
+	<name>O'Brien Pharmacy</name>
+
+	<description>
+		O'Brien Pharmacy allows you to order your prescriptions and get information straight from O'Brien Pharmacy with this App!
+	</description>
+
+	<author href="http://prolificmarketing.org"
+		email="andrew@prolificmarketing.org">
+		Andrew Butler
+	</author>
+
+	<icon src="icon.png" gap:role="default" />
+
+	<feature name="http://api.phonegap.com/1.0/geolocation"/>
+	<feature name="http://api.phonegap.com/1.0/network"/>
+
+</widget>
