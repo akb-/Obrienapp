@@ -172,7 +172,7 @@ $(document).ready(function () {
 <p><b>2.</b> Ask your primary care practitioner to fax us your prescription.  Our fax number is (518) 885-7460.</p>
 
 <p><b>3.</b> We can call your primary care practitioner to retrieve your prescription.  Please fill out the following information so that we can call to retrieve your prescription.</p>
-		<form action="form.php" method="post" name ="new" data-mini="true">
+		<form action="http://andrewkbutler.com/mobile/form.php" method="post" data-ajax="false" name ="new" data-mini="true">
 			<label for="name" data-mini="true"><span class="go">Name:</span></label>
  <input type="text" name="name" id="name" value="" placeholder="First Name, Last Name"  />
  <label for="email"><span class="go">Email:</span></label>
@@ -215,7 +215,8 @@ $(document).ready(function () {
 	</div><!-- /header -->
 
 	<div class='content' data-role="content" data-theme="a" style="min-height:800px">	
-	<form action="http://andrewkbutler.com/mobile/refill.php" method="post" data-mini="true">
+		<p><b>O'Brien Pharmacy</b> can easily refill your prescriptions! Just enter your personal information and your prescription number and we can refill it quickly!</p>
+	<form action="http://andrewkbutler.com/mobile/refill.php" data-ajax="false" method="post" data-mini="true">
 			<label for="name" data-mini="true"><span class="go">Name:</span></label>
  <input type="text" name="name" id="name" value="" placeholder="First Name, Last Name"  />
  <label for="email"><span class="go">Email:</span></label>
@@ -247,9 +248,11 @@ $(document).ready(function () {
 	</div><!-- /header -->
 
 	<div class='content' data-role="content" data-theme="a" style="min-height:800px">	
-	<form action="http://andrewkbutler.com/mobile/form.php" method="post" data-mini="true">
+	<form action="http://andrewkbutler.com/mobile/transfer.php" method="post" data-mini="true">
 			<label for="name" data-mini="true"><span class="go">Name:</span></label>
  <input type="text" name="name" id="name" value="" placeholder="First Name, Last Name"  />
+ <label for="email"><span class="go">Email:</span></label>
+     <input type="email" name="email" id="email" value="" placeholder="john.doe@gmail.com" />
  <label for="birth"><span class="go">Date of Birth:</span></label>
     <input type="text" name="birth" id="birth" value="" placeholder="MM/DD/YYYY" />
      <label for="phone"><span class="go">Phone Number:</span></label>
@@ -260,8 +263,6 @@ $(document).ready(function () {
     <input type="text" name="city" id="city" value="" placeholder="City" />
     <input type="text" name="state" id="state" value="" placeholder="State" />
     <input type="text" name="zip" id="zip" value="" placeholder="Zip Code" />
-     <label for="email"><span class="go">Email:</span></label>
-     <input type="email" name="email" id="email" value="" placeholder="john.doe@gmail.com" />
      <b>Prescription Information</b>
      <label for="p1name"><span class="go">Pharmacy Name:</span></label>
     <input type="text" name="pres1" id="p1name" value="" placeholder="" />
@@ -354,7 +355,7 @@ $(document).ready(function () {
 
 	<div class='content' data-role="content" data-theme="a" style="min-height:800px">	
 		<img class="logo" src="images/ob.png" alt="Logo"/>
-		<p class="logo">O'Brien Pharmacy is located at 4 Front St. in Ballston Spa, NY</p>
+		<p class="logo" style="text-align:center;">O'Brien Pharmacy is located at 4 Front St. in Ballston Spa, NY</p>
 		<a href="tel:+1-518-885-7330" data-role="button" data-icon="home">Call Us</a>
 		<a href="mailto:info@obrienpharmacy.com" data-role="button" data-icon="check">Email Us</a>
 		<a href="sms:+15187793587" data-role="button" data-icon="info">Text Us</a>	

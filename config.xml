@@ -2,12 +2,12 @@
 <widget xmlns		= "http://www.w3.org/ns/widgets"
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
 	id		= "com.obrien.app"
-	version 	= "1.0.1">
+	version 	= "1.1.0">
 
 	<name>O'Brien Pharmacy</name>
 
 	<description>
-		O'Brien Pharmacy allows you to order your prescriptions and get information straight from O'Brien Pharmacy with this App!
+		O'Brien Pharmacy allows you to order your prescriptions and get information straight from the source with this App!
 	</description>
 
 	<author href="http://prolificmarketing.org"
