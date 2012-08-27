@@ -2,7 +2,7 @@
 <widget xmlns		= "http://www.w3.org/ns/widgets"
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
 	id		= "com.obrien.app"
-	version 	= "1.1.0">
+	version 	= "1.1.1">
 
 	<name>O'Brien Pharmacy</name>
 
@@ -16,6 +16,11 @@
 	</author>
 
 	<icon src="icon.png" gap:role="default" />
+	<!--change this shit-->
+<icon src="icons/bb/icon.png" gap:platform="blackberry" />
+<icon src="icons/bb/icon_hover.png" gap:platform="blackberry" gap:state="hover"/>
+<gap:splash src="splash.png" />
+
 
 	<feature name="http://api.phonegap.com/1.0/geolocation"/>
 	<feature name="http://api.phonegap.com/1.0/network"/>
