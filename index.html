@@ -40,11 +40,62 @@ var latlng=new google.maps.LatLng(position.coords.latitude,position.coords.longi
 self.search({'location':latlng},function(results,status){if(status==='OK'){$('#from').val(results[0].formatted_address);self.addMarker({'position':currentLocation}).show(function(){self.openInfoWindow({'content':"<h4 style=\"padding:0px; margin:0px;\">Your Location:</h4>"+"<p style=\"padding:1px; margin:0px; font-size:0.7em;\">"+results[0].address_components[0].long_name+" "+results[0].address_components[1].long_name+" <br />"+results[0].address_components[3].short_name+" "+results[0].address_components[5].short_name+" "+results[0].address_components[7].short_name+"</p>"},this)});$('#mapapp').attr('href','http://maps.google.com/maps?saddr='+position.coords.latitude+','+position.coords.longitude+'&daddr='+location)}else{console.log('status response was '+status);$('#from').val(position.coords.latitude+","+position.coords.longitude);self.addMarker({'position':currentLocation}).show(function(){self.openInfoWindow({'content':'You are here'},this)})}})},function errorCallback(){self.addMarker({'position':self.get('map').getCenter()}).click(function(){self.openInfoWindow({'content':location},this)})},{enableHighAccuracy:true,maximumAge:600000})}else{self.addMarker({'position':self.get('map').getCenter()}).click(function(){self.openInfoWindow({'content':location},this)})}$('#submit').click(function(){self.displayDirections({'origin':$('#from').val(),'destination':$('#to').val(),'travelMode':google.maps.DirectionsTravelMode.DRIVING},{'panel':document.getElementById('directions')},function(response,status){(status==='OK')?$('#results').show():$('#results').hide()});return false})}})});$(function(){$('#directions_map').live("pageshow",function(){$('#map_canvas_1').gmap('refresh')})});
 </script>
  
-<script>
- $(document).ready(function() {
-  // disable ajax nav
-  $.mobile.ajaxLinksEnabled = false;
- });
+
+<script type="text/javascript">
+var googleMapsState = "";
+ 
+document.addEventListener("deviceready", setup, false);
+ 
+function setup() {
+    loadGoogleMaps();
+ 
+    document.addEventListener("online", function(e) {
+        if (googleMapsState == "" || googleMapsState == "error") {
+            loadGoogleMaps();
+        }
+    }, false);
+}
+ 
+function loadGoogleMaps() {
+    googleMapsState = "loading";
+ 
+    var script = document.createElement("script");
+    script.src = "http://maps.google.com/maps/api/js?v=3.7&sensor=true&callback=googleMapsReady";
+    script.type = "text/javascript";
+ 
+    script.addEventListener("error", function(e) {
+        googleMapsState = "error";
+    }, false);
+ 
+    script.addEventListener("load", function(e) {
+        setTimeout(function() {
+            if (googleMapsState == "loading") googleMapsState = "error";
+        }, 5000);
+    }, false);
+ 
+    document.getElementsByTagName("head")[0].appendChild(script);
+}
+ 
+function googleMapsReady() {
+    googleMapsState = "ready";
+}
+ 
+function checkGoogleMapsAvailability() {
+    var connectionState = navigator.network.connection.type;
+    if (connectionState == Connection.NONE || connectionState == Connection.UNKNOWN) {
+        return "No network connection available";
+    }
+ 
+    if (googleMapsState == "" || googleMapsState == "error") {
+        return "Maps are not currently available";
+    }
+ 
+    if (googleMapsState == "loading") {
+        return "Maps are loading, try again aoon";
+    }
+ 
+    return "";
+}
 </script>
 
    <style>
