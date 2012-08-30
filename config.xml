@@ -21,6 +21,8 @@
 <icon src="icons/bb/icon_hover.png" gap:platform="blackberry" gap:state="hover"/>
 <icon src="icons/apple/iphone.png" width="57" height="57" />
 <icon src="icons/apple/ipad.png" gap:platform="ios" width="72" height="72" />
+<icon src="icons/winphone/icon.png" gap:platform="winphone" />
+<icon src="icons/winohone/tile.png" gap:platform="winphone" gap:role="background" />
 <gap:splash src="splash.png" />
 
 

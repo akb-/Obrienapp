@@ -23,28 +23,7 @@
   <script type="text/javascript" src="js/modernizr.min.js"></script>
   <script src="http://maps.google.com/maps/api/js?key=AIzaSyCpO3P8YqT2oRh9F6gvcJTQ7aB8to_-FFU&amp;sensor=false" type="text/javascript"></script>
   <script type="text/javascript" src="js/html5_init.js"></script>
-
-<script type="text/javascript"> 
-
-      document.addEventListener("deviceready",onDeviceReady,false); 
-
-      // once the device ready event fires, you can safely do your 
-thing! -jm 
-      function onDeviceReady() { 
-        document.addEventListener("backbutton", onBackKeyDown, false); 
-      } 
-
-      function onBackKeyDown() { 
-        if ($.mobile.activePage.attr('id') == 'main') { 
-          <!-- navigator.app.exitApp(); --> 
-          device.exitApp(); 
-        } 
-        else { 
-          history.back(1); 
-        } 
-      } 
-
-    </script> 
+ 
 <script type="text/javascript">
 $(document).delegate("#directions_map","pageinit",function(){
 var destination={'center':'43.002662,-73.849001','zoom':16};
