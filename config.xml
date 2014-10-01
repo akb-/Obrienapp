@@ -4,7 +4,7 @@
 	id		= "com.obrien.app"
 	version 	= "1.1.1">
 
-	<preference name="phonegap-version" value="1.9.0" />
+	<preference name="phonegap-version" value="3.5.0" />
 
 	<name>O'Brien Pharmacy</name>
 
