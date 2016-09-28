@@ -20,9 +20,11 @@
 <div data-role="page" id="one" >
 
 	<div class='header' data-role="header" >
+	&nbsp;
+	&nbsp;
 	</div><!-- /header -->
 
-	<div class='content' data-role="content" data-theme="a" style="min-height:91vh">	
+	<div class='content' data-role="content" data-theme="a" style="min-height:800px">	
 <img class="logo" src="images/intro.png" alt="Logo"/>
 <ul data-role="listview" data-inset="true">
 	<li><img src="images/rx.png" alt="Prescription" class="ui-li-icon"><a href="#two" >Order Prescriptions</a></li>
@@ -32,6 +34,9 @@
 </ul>
 
 	</div><!-- /content -->
+<div class='footer' data-role="footer">
+		
+	</div><!-- /footer -->
 </div><!-- /page one -->
 
 <!-- Start of second page: #two -->
@@ -42,7 +47,7 @@
 	<h1>Prescriptions</h1>
 </div><!-- /header -->
 
-	<div class='content' data-role="content" data-theme="a" style="min-height:91vh">	
+	<div class='content' data-role="content" data-theme="a" style="min-height:800px">	
 		<ul data-role="listview" data-inset="true">
 	<li><img src="images/new.png" alt="Prescription" class="ui-li-icon"><a href="#new" >New Prescriptions</a></li>
 	<li><img src="images/refill.png" alt="Directions"  class="ui-li-icon"><a href="#refill" >Refill Prescriptions</a></li>
@@ -59,7 +64,7 @@
 	<a href="index.html#two" data-icon="back">Back</a>
 	<h1>New Prescriptions</h1>
 	</div><!-- /header -->
-	<div class='content' data-role="content" data-theme="a" style="min-height:91vh">	
+	<div class='content' data-role="content" data-theme="a" style="min-height:800px">	
 		<p> <b>O'Brien Pharmacy</b> can fill your new prescription(s) in many ways:</p>
 <p><b>1.</b> Ask your primary care practitioner to electronically send us your prescription.</p>
 
@@ -108,7 +113,7 @@
 	<h1>Refill Prescriptions</h1>
 	</div><!-- /header -->
 
-	<div class='content' data-role="content" data-theme="a" style="min-height:91vh">	
+	<div class='content' data-role="content" data-theme="a" style="min-height:800px">	
 		<p><b>O'Brien Pharmacy</b> can easily refill your prescriptions! Just enter your personal information and your prescription number and we can refill it quickly!</p>
 	<form action="http://andrewkbutler.com/mobile/refill.php" data-ajax="false" method="post" data-mini="true">
 			<label for="name" data-mini="true"><span class="go">Name:</span></label>
@@ -141,7 +146,7 @@
 	<h1>Transfer Prescriptions</h1>
 	</div><!-- /header -->
 
-	<div class='content' data-role="content" data-theme="a" style="min-height:91vh">	
+	<div class='content' data-role="content" data-theme="a" style="min-height:800px">	
 	<form action="http://andrewkbutler.com/mobile/transfer.php" method="post" data-mini="true">
 			<label for="name" data-mini="true"><span class="go">Name:</span></label>
  <input type="text" name="name" id="name" value="" placeholder="First Name, Last Name"  />
@@ -183,7 +188,7 @@
 		<h1>Directions</h1>
 </div><!-- /header -->
 
-	<div class='content' data-role="content" data-theme="a" style="min-height:91vh">	
+	<div class='content' data-role="content" data-theme="a" style="min-height:800px">	
 		<div class="ui-bar-a ui-corner-all ui-shadow" style="padding:1em;">
 
 					<div id="map_canvas_1" style="height:300px;"></div>
@@ -232,7 +237,7 @@
 		<h1>Health News</h1>
 	</div><!-- /header -->
 
-	<div id="test" data-role="content" class='content' data-theme="a" style="min-height:91vh"></div>
+	<div id="test" data-role="content" class='content' data-theme="a" style="min-height:800px"></div>
 
 		
 	</div><!-- /content -->
@@ -247,7 +252,7 @@
 		<h1>Contact Us</h1>
 	</div><!-- /header -->
 
-	<div class='content' data-role="content" data-theme="a" style="min-height:91vh">	
+	<div class='content' data-role="content" data-theme="a" style="min-height:800px">	
 		<img class="logo" src="images/ob.png" alt="Logo"/>
 		<p class="logo" style="text-align:center;">O'Brien Pharmacy is located at 4 Front St. in Ballston Spa, NY</p>
 		<a href="tel:+1-518-885-7330" data-role="button" data-icon="home">Call Us</a>
@@ -269,9 +274,7 @@
   <script type="text/javascript" src="js/html5_init.js"></script>
   <script type="text/javascript">
 $(document).ready(function () {
-
 	$('#test').rssfeed('http://obrienpharmacy.com/feed', {
-
 		limit: 15,
 		 header: false,
             date: false,
@@ -280,11 +283,8 @@ $(document).ready(function () {
             showerror: true,
             errormsg: '',
             key: null
-
 	});
-
 });
-
 </script>
  
 <script type="text/javascript">
@@ -308,5 +308,4 @@ self.search({'location':latlng},function(results,status){if(status==='OK'){$('#f
   $.mobile.ajaxLinksEnabled = false;
  });
 </script>	
-
 </body>
