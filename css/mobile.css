@@ -1,4 +1,11 @@
 body {  background: #ddd; }
+.ios-status {      height: 18pt;
+    background: #f9f9f9;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0; }
+.ui-header, .ui-footer {margin-top:20px;}
 body, #gmap-4, .page { height:100%; }
 .ui-body-c a.ui-link { color: #008595; font-weight: bold; text-decoration: none; }
 .hidden { display:none; }
