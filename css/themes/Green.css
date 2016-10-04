@@ -11,6 +11,17 @@
 
 /* A
 -----------------------------------------------------------------------------------------------------------*/
+input.ui-input-text {
+	background:#fff;
+	text-shadow:none !important;
+	color:black;
+	font-weight:400;
+}
+
+.gm-style {
+color:black !important;
+text-shadow:none !important;
+}
 .ui-bar-a {
 	border: 1px solid #009245 /*{a-bar-border}*/;
 	background: #009245 /*{a-bar-background-color}*/;
@@ -45,21 +56,6 @@
 	color: #2489CE /*{a-bar-link-active}*/;
 }
 
-.ui-mobile .ui-page {
-
-	background: #f9f9f9;
-    background-image: -webkit-gradient(linear,left top,left bottom,from( #f9f9f9 ),to( #eeeeee ));
-    background-image: -webkit-linear-gradient( #f9f9f9,#eeeeee );
-    background-image: -moz-linear-gradient( #f9f9f9,#eeeeee );
-    background-image: -ms-linear-gradient( #f9f9f9,#eeeeee );
-    background-image: -o-linear-gradient( #f9f9f9,#eeeeee );
-    background-image: linear-gradient( #f9f9f9,#eeeeee );
-}
-
-input.ui-input-text {
-background:#fff;
-}
-
 .ui-bar-a,
 .ui-bar-a input,
 .ui-bar-a select,
@@ -67,11 +63,17 @@ background:#fff;
 .ui-bar-a button {
 	   font-family: Helvetica, Arial, sans-serif /*{global-font-family}*/;
 }
-.ui-body-a,
-.ui-overlay-a {
+.ui-mobile .ui-page, .ui-overlay-a {
 	border: 1px solid #aaa /*{a-body-border}*/;
 	color: #333333 /*{a-body-color}*/;
 	text-shadow: 0 /*{a-body-shadow-x}*/ 1px /*{a-body-shadow-y}*/ 0 /*{a-body-shadow-radius}*/ #fff /*{a-body-shadow-color}*/;
+	background: #f9f9f9 /*{a-body-background-color}*/;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #f9f9f9 /*{a-body-background-start}*/), to( #eeeeee /*{a-body-background-end}*/)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient( #f9f9f9 /*{a-body-background-start}*/, #eeeeee /*{a-body-background-end}*/); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #f9f9f9 /*{a-body-background-start}*/, #eeeeee /*{a-body-background-end}*/); /* FF3.6 */
+	background-image:     -ms-linear-gradient( #f9f9f9 /*{a-body-background-start}*/, #eeeeee /*{a-body-background-end}*/); /* IE10 */
+	background-image:      -o-linear-gradient( #f9f9f9 /*{a-body-background-start}*/, #eeeeee /*{a-body-background-end}*/); /* Opera 11.10+ */
+	background-image:         linear-gradient( #f9f9f9 /*{a-body-background-start}*/, #eeeeee /*{a-body-background-end}*/);
 }
 .ui-overlay-a {
 	background-image: none;
@@ -626,6 +628,4 @@ a.ui-link-inherit {
     margin-right: auto;
     margin-bottom: 20px;	
 	}
-	.header{height:20%}
-.content{height:60%}
-.footer{height:20%}
+	
