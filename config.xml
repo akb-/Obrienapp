@@ -90,4 +90,7 @@
   <feature name="http://api.phonegap.com/1.0/geolocation"/>
   <feature name="http://api.phonegap.com/1.0/network"/>
 
+  <access origin="http://obrienpharmacy.com" subdomains="true" />
+  <access origin="http://andrewkbutler.com" subdomains="true" />
+
 </widget>
