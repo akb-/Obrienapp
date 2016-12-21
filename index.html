@@ -29,6 +29,14 @@ function onDeviceReady() {
     // Set all pages with class="page-content" to be at least contentHeight
     $('div[class="page-content"]').css({'min-height': contentHeight + 'px'});
  }</script>
+ <script>$(function () {
+    $('#refill-pres').bind('submit', function (e) {
+        e.preventDefault();
+        $.post('http://andrewkbutler.com/mobile/refill.php', $(this).serialize(), function (response) {
+            $.mobile.changePage('#two', {transition: 'slide'});
+        });
+    });
+});</script>
 </head>
 
 <body>
@@ -127,7 +135,7 @@ function onDeviceReady() {
 
 	<div class='content' data-role="content" data-theme="a" >	
 		<p><b>O'Brien Pharmacy</b> can easily refill your prescriptions! Just enter your personal information and your prescription number and we can refill it quickly!</p>
-	<form action="http://andrewkbutler.com/mobile/refill.php" data-ajax="false" method="post" data-mini="true">
+	<form action="http://andrewkbutler.com/mobile/refill.php" data-ajax="false" method="post" data-mini="true" id="refill-pres">
 			<label for="name" data-mini="true"><span class="go">Name:</span></label>
  <input type="text" name="name" id="name" value="" placeholder="First Name, Last Name"  />
  <label for="email"><span class="go">Email:</span></label>
