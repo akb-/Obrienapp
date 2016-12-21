@@ -37,6 +37,22 @@ function onDeviceReady() {
         });
     });
 });</script>
+<script>$(function () {
+    $('#new-pres').bind('submit', function (e) {
+        e.preventDefault();
+        $.post('http://andrewkbutler.com/mobile/form.php', $(this).serialize(), function (response) {
+            $.mobile.changePage('#two', {transition: 'slide'});
+        });
+    });
+});</script>
+<script>$(function () {
+    $('#trans-pres').bind('submit', function (e) {
+        e.preventDefault();
+        $.post('http://andrewkbutler.com/mobile/transfer.php', $(this).serialize(), function (response) {
+            $.mobile.changePage('#two', {transition: 'slide'});
+        });
+    });
+});</script>
 </head>
 
 <body>
@@ -91,7 +107,7 @@ function onDeviceReady() {
 <p><b>2.</b> Ask your primary care practitioner to fax us your prescription.  Our fax number is (518) 885-7460.</p>
 
 <p><b>3.</b> We can call your primary care practitioner to retrieve your prescription.  Please fill out the following information so that we can call to retrieve your prescription.</p>
-		<form action="http://andrewkbutler.com/mobile/form.php" method="post" data-ajax="false" name ="new" data-mini="true">
+		<form action="http://andrewkbutler.com/mobile/form.php" method="post" data-ajax="false" name ="new" data-mini="true" id="new-pres">
 			<label for="name" data-mini="true"><span class="go">Name:</span></label>
  <input type="text" name="name" id="name" value="" placeholder="First Name, Last Name"  />
  <label for="email"><span class="go">Email:</span></label>
@@ -167,7 +183,7 @@ function onDeviceReady() {
 	</div><!-- /header -->
 
 	<div class='content' data-role="content" data-theme="a" >	
-	<form action="http://andrewkbutler.com/mobile/transfer.php" method="post" data-mini="true">
+	<form action="http://andrewkbutler.com/mobile/transfer.php" method="post" data-mini="true" id="trans-pres">
 			<label for="name" data-mini="true"><span class="go">Name:</span></label>
  <input type="text" name="name" id="name" value="" placeholder="First Name, Last Name"  />
  <label for="email"><span class="go">Email:</span></label>
