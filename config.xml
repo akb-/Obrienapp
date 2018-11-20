@@ -91,6 +91,12 @@
   <plugin name="cordova-plugin-network-information" spec="~2.0.1" />
 
   <access origin="http://obrienpharmacy.com" subdomains="true" />
+  <access origin="https://obrienpharmacy.com" subdomains="true" />
   <access origin="http://andrewkbutler.com" subdomains="true" />
+  <access origin="https://andrewkbutler.com" subdomains="true" />
+  <access origin="http://feedrapp.info" subdomains="true" />
+  <access origin="https://feedrapp.info" subdomains="true" />
+  <access origin="https://www.google.com" subdomains="true" />
+  <access origin="https://google.com" subdomains="true" />
 
 </widget>
