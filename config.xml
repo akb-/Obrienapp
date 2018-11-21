@@ -4,7 +4,7 @@
   xmlns:android   = "http://schemas.android.com/apk/res/android"
   versionCode  =  "119"
   id    = "com.obrien.app"
-  version   = "1.4.21">
+  version   = "1.4.22">
 
   <preference name="phonegap-version" value="cli-8.0.0" />
 
